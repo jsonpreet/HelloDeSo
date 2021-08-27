@@ -72,7 +72,6 @@ class Header extends Component {
     render() {
         const accessLevel = 2;
         const JWT = false;
-        const {user} = this.state;
         const {isLoggedIn} = this.props;
 
         return (

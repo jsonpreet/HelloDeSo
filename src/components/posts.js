@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Container, Box, CircularProgress} from '@material-ui/core';
+import Loader from '../partials/loader';
 import Post from './post';
 import '../App.css';
 
@@ -55,16 +55,14 @@ class Posts extends Component {
         return ( 
             <>
                 <div className='posts-list'>
-                    <Box mt={5}>
-                        {isLoading ? 
-                        <CircularProgress />
-                        : null}
-                        {posts.length > 0 && posts.map((post, index) => (
-                            <div className="post" id={post?.PostHashHex} key={index}>
-                                <Post post={post} />
-                            </div>
-                        ))}
-                    </Box>
+                    {isLoading ? 
+                    <Loader/>
+                    : null}
+                    {posts.length > 0 && posts.map((post, index) => (
+                        <div className="post" id={post?.PostHashHex} key={index}>
+                            <Post post={post} />
+                        </div>
+                    ))}
                 </div>
             </>
          );

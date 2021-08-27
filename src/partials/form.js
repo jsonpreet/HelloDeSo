@@ -3,7 +3,6 @@ import axios from 'axios';
 import {submitPost} from '../services/submitPost';
 import '../App.css';
 
-var identityWindow = null;
 const headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
