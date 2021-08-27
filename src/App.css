@@ -1,31 +1,153 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background:rgba(249, 250, 251);
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.bitCloutLogo svg{
+  fill:#fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.textarea{
+  font-family: inherit;
+  font-size:16px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.userImage {
+  min-width:48px;
+}
+.userImage > a {
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.link {
+	color: rgba(59, 130, 246);
+}
+
+.link:hover{
+  color:rgba(29, 78, 216);
+}
+
+.postInfo {
+	max-width: calc(100% - 4.5rem);
+	word-wrap: break-word;
+}
+
+.container{
+    border: "0px solid rgba(255, 255, 255, 1)";
+    box-shadow: "0px 0px 20px rgba(0, 0, 0, .1)";
+    border-radius: "4px";
+    background-color: "white";
+    display: "flex";
+    padding: "16px";
+    width: "200px"
   }
+
+.circle {
+    height: "56px";
+    width: "56px";
+    border-radius: "50%"
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.line {
+    width: "96px";
+    height: "8px";
+    margin-left: "16px";
+    border-radius: "8px"
+  }
+
+.sidebarWrapper {
+  min-width: 290px;
 }
 
-.App-link {
-  color: #61dafb;
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.ReactModalPortal {
+	z-index: 999;
+	position: relative;
+}
+
+.container--waitlistapi {
+	border-radius: 0px!important;
+	padding: 0px 0px 0px!important;
+}
+
+.container--waitlistapi h1 {
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.input--waitlistapi {
+	border: 1px solid #ccc!important;
+  border-radius: 0.5rem!important;
+}
+
+.closeModal {
+	margin-top: -20px;
+	margin-right: -15px;
+	font-size: 18px;
+}
+
+.button--waitlistapi {
+	height: 40px!important;
+	background-color: #000!important;
+  border-radius: 0.5rem!important;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+  transition-duration:500ms;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button--waitlistapi:hover{
+	background-color: rgba(79, 70, 229)!important;
+}
+
+@media only screen and (max-width:480px){
+  .userImage {
+    min-width: 32px;
+  }
+  .userImage > a {
+    width: 32px;
+    height: 32px;
+  }
+  .userCard span.text-blue-500 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+  .postInfo {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  .userName {
+    display: inline-block;
+  }
 }
 
 @keyframes App-logo-spin {
