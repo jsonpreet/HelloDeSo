@@ -26,7 +26,7 @@ class Posts extends Component {
     loadPosts = async () => {
         try {
           this.setState({ isLoading: true });
-            await axios.post(`https://bitclout.com/api/v0/get-posts-for-public-key`,{
+            await axios.post(`https://tijn.club/api/v0/get-posts-for-public-key`,{
             PublicKeyBase58Check: this.props.publicKey,
             NumToFetch: 20,
             MediaRequired: false,

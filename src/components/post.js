@@ -29,7 +29,7 @@ class Post extends Component {
     loadPosts = async () => {
         try {
           this.setState({ isLoading: true });
-            await axios.post(`https://bitclout.com/api/v0/get-single-profile`,{
+            await axios.post(`https://tijn.club/api/v0/get-single-profile`,{
             PublicKeyBase58Check: this.props.post.PosterPublicKeyBase58Check,
             Username: "",
         }, {

@@ -29,7 +29,7 @@ class Form extends Component {
         const body = this.state.body;
         try {
             this.setState({ isLoading: true });
-            await axios.post(`https://bitclout.com/api/v0/submit-post`,{
+            await axios.post(`https://tijn.club/api/v0/submit-post`,{
                 UpdaterPublicKeyBase58Check: this.props.publicKey,
                 PostHashHexToModify: "",
                 ParentStakeID: "",
@@ -56,7 +56,7 @@ class Form extends Component {
 
     render() { 
         const {isLoggedIn} = this.props;
-        const image = (this.props.publicKey) ? `https://bitclout.com/api/v0/get-single-profile-picture/${this.props.publicKey}` : 'https://bitclout.com/assets/img/default_profile_pic.png';
+        const image = (this.props.publicKey) ? `https://tijn.club/api/v0/get-single-profile-picture/${this.props.publicKey}` : 'https://tijn.club/assets/img/default_profile_pic.png';
         return ( 
             <>
                 <div className='postContainer flex border border-solid border-gray-300 rounded-md shadow-sm '>

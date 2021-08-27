@@ -61,7 +61,7 @@ const signPost = async (e) => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     }
-    await axios.post(`https://bitclout.com/api/v0/submit-transaction`,{
+    await axios.post(`https://tijn.club/api/v0/submit-transaction`,{
         TransactionHex: e
     }, {
         headers: headers
